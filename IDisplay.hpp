@@ -10,7 +10,7 @@
 #include <string>
 #include <memory>
 #include <cstdint>
-#include "IDisplayModule.hpp"
+#include "IDisplay.hpp"
 
 class IDisplayModule {
 public:
@@ -46,6 +46,8 @@ public:
     };
 
     struct Sprite {
+        Vector2u pixelPosition;
+        // Texture texture;
     };
 
     virtual void init(Assets *assets) = 0;
