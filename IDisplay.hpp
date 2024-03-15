@@ -28,13 +28,17 @@ public:
     };
 
     enum class Button {
-        LEFT,
-        RIGHT,
-        UP,
-        DOWN,
+        LEFT, // MOVE LEFT
+        RIGHT, // MOVE RIGHT
+        UP, // MOVE UP
+        DOWN, // MOVE DOWN
         X,
         C,
-        ESCAPE,
+        L, // CHANGE LIBRARY
+        G, // CHANGE GAME
+        Q, // QUIT PROGRAM
+        ESCAPE, // GO TO MENU
+        SPACE,
     };
 
     struct Vector2u {

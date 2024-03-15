@@ -15,11 +15,6 @@ namespace arcade {
         const char *data;           // Binary data of the asset
     };
 
-    class Image : public Asset {
-    public:
-        const char *text;           // Text representation of the image
-    };
-
     class Assets {
     public:
         const Asset *fonts;         // Null-terminated array of binary fonts
