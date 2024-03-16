@@ -18,7 +18,7 @@ public:
 
     enum class Color {
         BLACK,
-        REF,
+        RED,
         GREEN,
         YELLOW,
         BLUE,
@@ -32,13 +32,13 @@ public:
         RIGHT, // MOVE RIGHT
         UP, // MOVE UP
         DOWN, // MOVE DOWN
-        X,
-        C,
+        X, // ACTION IN GAME
+        C, // ACTION IN GAME
+        SPACE, // ACTION IN GAME
         L, // CHANGE LIBRARY
         G, // CHANGE GAME
         Q, // QUIT PROGRAM
         ESCAPE, // GO TO MENU
-        SPACE,
     };
 
     struct Vector2u {
@@ -51,6 +51,7 @@ public:
 
     struct Sprite {
         Vector2u pixelPosition;
+        // id ?
         // Texture texture;
     };
 

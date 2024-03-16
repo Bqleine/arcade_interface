@@ -12,7 +12,7 @@ namespace arcade {
     class Asset {
     public:
         int id;                     // Unique identifier for the asset
-        const char *data;           // Binary data of the asset
+        const char *data;           // Path to the asset
     };
 
     class Assets {
