@@ -11,13 +11,14 @@
 #include "Events.hpp"
 
 namespace arcade::display {
-
     class IDisplay {
-        virtual ~IDisplay() = default;
- 
-        virtual void init(Assets *assets) = 0;
-        virtual void stop() = 0;
-        virtual DisplayEvent *draw(Sprite *sprites) = 0;
-    };
+        public:
+            virtual ~IDisplay() = default;
 
+            virtual void init(Assets *assets) = 0;
+
+            virtual void stop() = 0;
+
+            virtual DisplayEvent *draw(Sprite *sprites) = 0;
+    };
 }

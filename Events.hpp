@@ -6,9 +6,7 @@
 */
 
 #pragma once
-
 namespace arcade {
-
     enum class Button {
         LEFT, // MOVE LEFT
         RIGHT, // MOVE RIGHT
@@ -23,19 +21,21 @@ namespace arcade {
     };
 
     class DisplayEvent {
-        Button type;
+        public:
+            Button type;
     };
 
     enum GameEventType {
         LOAD_LIB,
         LOAD_GAME,
     };
-    
+
     class GameEvent {
-        GameEventType type;
-        union {
-            const char *library;      // type==L : Library to load
-            const char *game;         // type==G : Game to load
-        };
+        public:
+            GameEventType type;
+            union {
+                const char *library;      // type==L : Library to load
+                const char *game;         // type==G : Game to load
+            };
     };
 }

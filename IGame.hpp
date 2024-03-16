@@ -11,15 +11,16 @@
 #include "Events.hpp"
 
 namespace arcade::game {
-
     class IGame {
-    public:
-        virtual ~IGame() = default;
+        public:
+            virtual ~IGame() = default;
 
-        virtual Assets *getAssets() = 0;
-        virtual Size getGridSize() = 0;
-        virtual GameEvent *update(DisplayEvent *events) = 0;
-        virtual Sprite *getSprites() = 0;
+            virtual Assets *getAssets() = 0;
+
+            virtual Size getGridSize() = 0;
+
+            virtual GameEvent *update(DisplayEvent *events) = 0;
+
+            virtual Sprite *getSprites() = 0;
     };
-
 }
