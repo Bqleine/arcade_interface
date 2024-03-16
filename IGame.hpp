@@ -7,16 +7,19 @@
 
 #pragma once
 
-#include <memory>
-#include <string>
+#include "Types.hpp"
+#include "Events.hpp"
 
-// to choose for Assets lists
-#include <unordered_map>
-#include <vector>
+namespace arcade::game {
 
-class IGameModule {
-public:
-    virtual ~IGameModule() = default;
+    class IGame {
+    public:
+        virtual ~IGame() = default;
 
-    virtual void getAssets() = 0;
-};
+        virtual Assets *getAssets() = 0;
+        virtual Size getGridSize() = 0;
+        virtual GameEvent *update(DisplayEvent *events) = 0;
+        virtual Sprite *getSprites() = 0;
+    };
+
+}

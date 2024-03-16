@@ -35,8 +35,15 @@ namespace arcade {
         float y;
     };
 
+    struct Size {
+        unsigned int width;
+        unsigned int height;
+    };
+
     struct Sprite {
         Position pixelPosition;
+        Size size;              // The asset should be scaled to fit the size in
+                                // the grid
         unsigned int asset_id;
     };
 
