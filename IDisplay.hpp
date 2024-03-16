@@ -12,9 +12,7 @@
 #include <cstdint>
 #include "IDisplay.hpp"
 
-class IDisplayModule {
-public:
-    virtual ~IDisplayModule() = default;
+namespace arcade {
 
     enum class Color {
         BLACK,
@@ -58,4 +56,5 @@ public:
     virtual void init(Assets *assets) = 0;
     virtual void stop() = 0;
     virtual void draw() = 0;
-};
+
+}

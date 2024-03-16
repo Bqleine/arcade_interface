@@ -12,7 +12,12 @@ namespace arcade {
     class Asset {
     public:
         int id;                     // Unique identifier for the asset
-        const char *data;           // Path to the asset
+        const char *path;           // Path to the asset
+    };
+
+    class Image : public Asset {
+    public:
+        const char *text;           // Text representation of the image
     };
 
     class Assets {
