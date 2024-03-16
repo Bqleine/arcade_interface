@@ -18,7 +18,7 @@ namespace arcade {
     class Assets {
     public:
         const Asset *fonts;         // Null-terminated array of binary fonts
-        const Image *images;        // Null-terminated array of binary images
+        const Asset *images;        // Null-terminated array of binary images
         const Asset *sounds;        // Null-terminated array of binary sounds
     };
 
