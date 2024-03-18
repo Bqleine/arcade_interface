@@ -58,4 +58,9 @@ namespace arcade {
         CYAN,
         WHITE,
     };
+
+    enum class LibType {
+        GAME,
+        DISPLAY
+    };
 }
