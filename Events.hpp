@@ -18,6 +18,7 @@ namespace arcade {
         Q, // QUIT PROGRAM
         ESCAPE, // GO TO MENU
         ENTER, // SELECTION
+        OTHER, // OTHER 
     };
 
     class DisplayEvent {

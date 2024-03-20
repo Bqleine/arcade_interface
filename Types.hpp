@@ -7,6 +7,17 @@
 
 #pragma once
 namespace arcade {
+    enum class Color {
+        BLACK,
+        RED,
+        GREEN,
+        YELLOW,
+        BLUE,
+        MAGENTA,
+        CYAN,
+        WHITE,
+    };
+
     class Asset {
         public:
             unsigned int id;        // Unique identifier for the asset
@@ -14,15 +25,16 @@ namespace arcade {
     };
 
     class Image : public Asset {
-        public:
-            const char *text;       // Text representation of the image
+    public:
+        const char *text; // Text representation of the image
+        Color colors;
     };
 
     class Assets {
-        public:
-            const Asset *fonts;     // Null-terminated array of fonts
-            const Asset *images;    // Null-terminated array of images
-            const Asset *sounds;    // Null-terminated array of sounds
+    public:
+        const Asset *fonts;     // Null-terminated array of fonts
+        const Image *images;    // Null-terminated array of images
+        const Asset *sounds;    // Null-terminated array of sounds
     };
 
     /*
@@ -48,14 +60,8 @@ namespace arcade {
             unsigned int asset_id;
     };
 
-    enum class Color {
-        BLACK,
-        RED,
-        GREEN,
-        YELLOW,
-        BLUE,
-        MAGENTA,
-        CYAN,
-        WHITE,
+    enum class LibType {
+        GAME,
+        DISPLAY
     };
 }
