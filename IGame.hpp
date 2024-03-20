@@ -22,7 +22,5 @@ namespace arcade::game {
             virtual GameEvent *update(DisplayEvent *events) = 0;
 
             virtual Sprite *getSprites() = 0;
-
-            virtual LibType getLibType() = 0;
     };
 }
