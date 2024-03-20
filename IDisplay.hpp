@@ -20,7 +20,5 @@ namespace arcade::display {
             virtual void stop() = 0;
 
             virtual DisplayEvent *draw(Sprite *sprites) = 0;
-
-            virtual LibType getLibType() = 0;
     };
 }
