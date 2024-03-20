@@ -25,6 +25,7 @@ namespace arcade {
     enum GameEventType {
         LOAD_LIB,
         LOAD_GAME,
+        QUIT_GAME, // SHOULD BE SEND BY THE GAME TO THE CORE TO CLOSE AND DELETE THE GAME
     };
 
     class GameEvent {
