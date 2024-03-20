@@ -8,12 +8,12 @@ namespace arcade::games {
     public:
         virtual ~IGame() = default;
 
-        virtual std::vector<Assets> getAssets() = 0 const;
+        virtual std::vector<Assets> getAssets() const = 0;
 
-        virtual Size getGridSize() = 0 const;
+        virtual Size getGridSize() const = 0;
 
         virtual std::vector<GameEvent> update(const std::vector<DisplayEvent> &events) = 0;
 
-        virtual std::vector<Sprite> getSprites() = 0 const;
+        virtual std::vector<Sprite> getSprites() const = 0;
     };
 }
