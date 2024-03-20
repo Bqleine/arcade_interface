@@ -1,6 +1,7 @@
 #pragma once
 
 #include "iostream"
+
 namespace arcade {
     enum class Button {
         LEFT, // MOVE LEFT
@@ -17,8 +18,8 @@ namespace arcade {
     };
 
     class DisplayEvent {
-    public:
-        Button type;
+        public:
+            Button type;
     };
 
     enum GameEventType {
@@ -27,11 +28,8 @@ namespace arcade {
     };
 
     class GameEvent {
-    public:
-        GameEventType type;
-        union {
+        public:
+            GameEventType type;
             const std::string library;      // type==L : Library to load
-            const std::string game;         // type==G : Game to load
-        };
     };
 }
