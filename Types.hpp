@@ -67,7 +67,7 @@ namespace arcade {
         Position pixelPosition;
         Size size;              // The asset should be scaled to fit the size in
         // the grid
-        unsigned int asset_id;
+        unsigned int asset_id; // ID FONT IF TEXT
         SpriteType type;
         Text text;
     };

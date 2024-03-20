@@ -14,7 +14,7 @@ namespace arcade::display {
     public:
         virtual ~IDisplay() = default;
 
-        virtual void init(const std::vector<Assets> &assets, const Metadata &metadata) = 0;
+        virtual void init(const Assets &assets, const Metadata &metadata) = 0;
 
         virtual void stop() = 0;
 
