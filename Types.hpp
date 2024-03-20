@@ -62,6 +62,7 @@ namespace arcade {
         Size size;              // The asset should be scaled to fit the size in
         // the grid
         unsigned int asset_id;
+        SpriteType type;
         std::string text; // used only for text
     };
 
