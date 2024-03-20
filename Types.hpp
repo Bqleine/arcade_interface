@@ -34,6 +34,12 @@ namespace arcade {
         Color color;
     };
 
+    class Text {
+    public:
+        std::string str;
+        Color color;
+    };
+
     class Assets {
     public:
         std::vector<Asset> fonts;     // Null-terminated array of fonts
@@ -63,7 +69,7 @@ namespace arcade {
         // the grid
         unsigned int asset_id;
         SpriteType type;
-        std::string text; // used only for text
+        Text text;
     };
 
     class Metadata {
