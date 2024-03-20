@@ -1,11 +1,6 @@
-/*
-** EPITECH PROJECT, 2024
-** arcade_interface
-** File description:
-** Events
-*/
-
 #pragma once
+
+#include "iostream"
 namespace arcade {
     enum class Button {
         LEFT, // MOVE LEFT
@@ -18,12 +13,12 @@ namespace arcade {
         Q, // QUIT PROGRAM
         ESCAPE, // GO TO MENU
         ENTER, // SELECTION
-        OTHER, // OTHER 
+        OTHER, // OTHER
     };
 
     class DisplayEvent {
-        public:
-            Button type;
+    public:
+        Button type;
     };
 
     enum GameEventType {
@@ -32,11 +27,11 @@ namespace arcade {
     };
 
     class GameEvent {
-        public:
-            GameEventType type;
-            union {
-                const char *library;      // type==L : Library to load
-                const char *game;         // type==G : Game to load
-            };
+    public:
+        GameEventType type;
+        union {
+            const std::string library;      // type==L : Library to load
+            const std::string game;         // type==G : Game to load
+        };
     };
 }

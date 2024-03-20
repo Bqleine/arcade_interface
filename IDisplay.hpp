@@ -1,24 +1,23 @@
 /*
 ** EPITECH PROJECT, 2024
-** arcade
+** bootstrap_arcade
 ** File description:
-** IDisplayModule
+** IDisplayModule.hpp
 */
 
 #pragma once
-
 #include "Types.hpp"
 #include "Events.hpp"
 
 namespace arcade::display {
     class IDisplay {
-        public:
-            virtual ~IDisplay() = default;
+    public:
+        virtual ~IDisplay() = default;
 
-            virtual void init(Assets *assets) = 0;
+        virtual void init(const std::vector<Assets> &assets, const Metadata &metadata) = 0;
 
-            virtual void stop() = 0;
+        virtual void stop() = 0;
 
-            virtual DisplayEvent *draw(Sprite *sprites) = 0;
+        virtual std::vector<DisplayEvent> draw(const std::vector<Sprite> &sprites) = 0;
     };
 }

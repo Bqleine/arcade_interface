@@ -1,26 +1,19 @@
-/*
-** EPITECH PROJECT, 2024
-** arcade
-** File description:
-** IGameModule
-*/
-
 #pragma once
 
 #include "Types.hpp"
 #include "Events.hpp"
 
-namespace arcade::game {
+namespace arcade::games {
     class IGame {
-        public:
-            virtual ~IGame() = default;
+    public:
+        virtual ~IGame() = default;
 
-            virtual Assets *getAssets() = 0;
+        virtual std::vector<Assets> getAssets() = 0 const;
 
-            virtual Size getGridSize() = 0;
+        virtual Size getGridSize() = 0 const;
 
-            virtual GameEvent *update(DisplayEvent *events) = 0;
+        virtual std::vector<GameEvent> update(const std::vector<DisplayEvent> &events) = 0;
 
-            virtual Sprite *getSprites() = 0;
+        virtual std::vector<Sprite> getSprites() = 0 const;
     };
 }

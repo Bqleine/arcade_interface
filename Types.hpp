@@ -1,12 +1,10 @@
-/*
-** EPITECH PROJECT, 2024
-** arcade_interface
-** File description:
-** Game assets
-*/
-
 #pragma once
+
+#include <iostream>
+#include <vector>
+
 namespace arcade {
+
     enum class Color {
         BLACK,
         RED,
@@ -18,51 +16,59 @@ namespace arcade {
         WHITE,
     };
 
+    enum class SpriteType {
+        Image,
+        Text,
+        Sound
+    };
+
     class Asset {
-        public:
-            unsigned int id;        // Unique identifier for the asset
-            const char *path;       // Path to the asset
+    public:
+        unsigned int id;        // Unique identifier for the asset
+        const std::string path;       // Path to the asset
     };
 
     class Image : public Asset {
     public:
-        const char *text; // Text representation of the image
-        Color colors;
+        char text; // Text representation of the image
+        Color color;
     };
 
     class Assets {
     public:
-        const Asset *fonts;     // Null-terminated array of fonts
-        const Image *images;    // Null-terminated array of images
-        const Asset *sounds;    // Null-terminated array of sounds
+        std::vector<Asset> fonts;     // Null-terminated array of fonts
+        std::vector<Image> images;    // Null-terminated array of images
+        std::vector<Asset> sounds;    // Null-terminated array of sounds
     };
 
     /*
      * A position inside the game grid
      */
     class Position {
-        public:
-            float x;
-            float y;
+    public:
+        float x;
+        float y;
     };
 
     class Size {
-        public:
-            unsigned int width;
-            unsigned int height;
+    public:
+        unsigned int width;
+        unsigned int height;
     };
 
     class Sprite {
-        public:
-            Position pixelPosition;
-            Size size;              // The asset should be scaled to fit the size in
-            // the grid
-            unsigned int asset_id;
+    public:
+        Position pixelPosition;
+        Size size;              // The asset should be scaled to fit the size in
+        // the grid
+        unsigned int asset_id;
+        std::string text; // used only for text
     };
 
-    enum class LibType {
-        GAME,
-        DISPLAY,
-        MENU
+    class Metadata {
+    public:
+        std::string gameName;
+        Size gridSize;
     };
+
 }
