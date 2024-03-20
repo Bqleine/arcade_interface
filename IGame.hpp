@@ -8,7 +8,7 @@ namespace arcade::game {
     public:
         virtual ~IGame() = default;
 
-        virtual std::vector<Assets> getAssets() const = 0;
+        virtual Assets getAssets() const = 0;
 
         virtual Size getGridSize() const = 0;
 
