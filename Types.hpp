@@ -62,11 +62,7 @@ namespace arcade {
 
     enum class LibType {
         GAME,
-        DISPLAY
-    };
-
-    enum class LibType {
-        GAME,
-        DISPLAY
+        DISPLAY,
+        MENU
     };
 }
