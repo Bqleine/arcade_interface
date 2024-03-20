@@ -3,7 +3,7 @@
 #include "Types.hpp"
 #include "Events.hpp"
 
-namespace arcade::games {
+namespace arcade::game {
     class IGame {
     public:
         virtual ~IGame() = default;
