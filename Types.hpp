@@ -71,4 +71,9 @@ namespace arcade {
         Size gridSize;
     };
 
+    enum class LibType {
+        GAME,
+        DISPLAY,
+        MENU
+    };
 }
