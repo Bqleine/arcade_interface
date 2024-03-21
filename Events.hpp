@@ -14,6 +14,7 @@ namespace arcade {
         Q, // QUIT PROGRAM
         L, // CHANGE GRAPHIC
         G, // CHANGE GAME
+        R, // RESTART GAME
         ESCAPE, // GO TO MENU
         ENTER, // SELECTION
         OTHER, // OTHER
