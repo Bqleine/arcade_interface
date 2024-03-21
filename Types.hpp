@@ -56,8 +56,8 @@ namespace arcade {
 
     class Size {
         public:
-            unsigned int width;
-            unsigned int height;
+            float width;
+            float height;
     };
 
     class Sprite {
