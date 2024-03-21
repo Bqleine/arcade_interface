@@ -15,7 +15,5 @@ namespace arcade::game {
         virtual std::vector<GameEvent> update(const std::vector<DisplayEvent> &events) = 0;
 
         virtual const std::vector<Sprite> &getSprites() const = 0;
-
-        virtual void setLib(std::vector<std::string> libGames, std::vector<std::string> libGraphical);
     };
 }
