@@ -79,6 +79,9 @@ namespace arcade {
             unsigned int cellSize;
     };
 
+    const std::string LIB_ENTRYPOINT = "entryPoint";
+    const std::string LIB_GETTYPE = "getType";
+    
     enum class LibType {
         GAME,
         DISPLAY,
