@@ -17,7 +17,8 @@ namespace arcade {
     enum class SpriteType {
         Image,
         Text,
-        Sound
+        Sound,
+        Music
     };
 
     class Asset {
