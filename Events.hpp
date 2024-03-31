@@ -33,6 +33,7 @@ namespace arcade {
         BACK_TO_MENU, // BACK TO MENU
         EXIT, // EXIT PROGRAM
         RESTART_GAME, // RESTART GAME
+        LOAD_ASSETS, // LOAD ASSETS
     };
 
     class GameEvent {
