@@ -8,21 +8,16 @@ namespace arcade {
         RIGHT, // MOVE RIGHT
         UP, // MOVE UP
         DOWN, // MOVE DOWN
-        X, // ACTION IN GAME
-        C, // ACTION IN GAME
         SPACE, // ACTION IN GAME
-        Q, // QUIT PROGRAM
-        L, // NEXT GRAPHIC
-        G, // NEXT GAME
-        R, // RESTART GAME
         ESCAPE, // GO TO MENU
         ENTER, // SELECTION
         OTHER, // OTHER
+        A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
     };
 
     class DisplayEvent {
-        public:
-            Button type;
+    public:
+        Button type;
     };
 
     enum GameEventType {
@@ -37,8 +32,8 @@ namespace arcade {
     };
 
     class GameEvent {
-        public:
-            GameEventType type;
-            const std::string library;      // type==L : Library to load
+    public:
+        GameEventType type;
+        const std::string library;      // type==L : Library to load
     };
 }
