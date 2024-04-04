@@ -14,6 +14,7 @@ namespace arcade {
         CYAN,
         WHITE,
     };
+
     enum class SpriteType {
         Image,
         Text,
@@ -65,9 +66,8 @@ namespace arcade {
     class Sprite {
         public:
             Position pixelPosition;
-            Size size;              // The asset should be scaled to fit the size in
-            // the grid
-            unsigned int asset_id; // ID FONT IF TEXT
+            Size size;              // The asset should be scaled to fit the size in the grid
+            unsigned int asset_id;  // ID FONT IF TEXT
             SpriteType type;
             Text text;
     };
@@ -81,7 +81,7 @@ namespace arcade {
 
     const std::string LIB_ENTRYPOINT = "entryPoint";
     const std::string LIB_GETTYPE = "getType";
-    
+
     enum class LibType {
         GAME,
         DISPLAY,
